@@ -1,0 +1,203 @@
+{
+ "_note": "Фото берутся только из Wikimedia Commons (свободные лицензии). Сами фото в репозитории не хранятся: make_portraits.py скачивает их в отдельную папку. crop = [x0/ширина, y0/высота, сторона/ширина] исходного кадра; face = [cx, cy, rx, ry] лица в долях квадратного кадра (подсказка для вырезания фона). Необязательно: bg = прямоугольники точного фона, chroma = приглушение цвета, colors/speckle = параметры постеризации.",
+ "portraits": {
+  "facebook": {
+   "person": "Марк Цукерберг",
+   "file": "Mark Zuckerberg F8 2019 Keynote (32830578717) (cropped).jpg",
+   "crop": [
+    0,
+    0.025,
+    1.0
+   ],
+   "face": [
+    0.5,
+    0.4,
+    0.16,
+    0.22
+   ]
+  },
+  "amazon": {
+   "person": "Джефф Безос",
+   "file": "Jeff Bezos' iconic laugh crop.jpg",
+   "crop": [
+    0.09,
+    0,
+    0.86
+   ],
+   "face": [
+    0.55,
+    0.4,
+    0.17,
+    0.24
+   ],
+   "chroma": 0.55
+  },
+  "airbnb": {
+   "person": "Брайан Чески",
+   "file": "Brian Chesky 2025.jpg",
+   "crop": [
+    0.17,
+    0.02,
+    0.66
+   ],
+   "face": [
+    0.5,
+    0.3,
+    0.15,
+    0.22
+   ]
+  },
+  "glossier": {
+   "person": "Эмили Вайс",
+   "file": "Emily-weiss-2017 (cropped).jpg",
+   "crop": [
+    0.08,
+    0,
+    0.84
+   ],
+   "face": [
+    0.5,
+    0.38,
+    0.15,
+    0.22
+   ]
+  },
+  "spanx": {
+   "person": "Сара Блейкли",
+   "file": "Sara Blakely.jpg",
+   "crop": [
+    0.02,
+    0.03,
+    0.94
+   ],
+   "face": [
+    0.5,
+    0.4,
+    0.25,
+    0.3
+   ]
+  },
+  "mikaila": {
+   "person": "Микайла Улмер",
+   "file": "Mikaila Ulmer.jpg",
+   "crop": [
+    0.35,
+    0.1,
+    0.43
+   ],
+   "face": [
+    0.5,
+    0.42,
+    0.28,
+    0.34
+   ],
+   "bg": [
+    [
+     0.88,
+     0.45,
+     1,
+     1
+    ]
+   ]
+  },
+  "estee": {
+   "person": "Эсте Лаудер",
+   "file": "Estee Lauder NYWTS (cropped).jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "face": [
+    0.43,
+    0.36,
+    0.3,
+    0.28
+   ],
+   "bg": [
+    [
+     0,
+     0.6,
+     0.14,
+     1
+    ]
+   ]
+  },
+  "buffett": {
+   "person": "Уоррен Баффет",
+   "file": "Warren Buffett at the 2015 SelectUSA Investment Summit (cropped).jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "face": [
+    0.55,
+    0.36,
+    0.2,
+    0.24
+   ]
+  },
+  "dropbox": {
+   "person": "Дрю Хьюстон",
+   "file": "Drew Houston at Web Summit (cropped).jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "face": [
+    0.5,
+    0.45,
+    0.22,
+    0.26
+   ],
+   "erode": 3
+  },
+  "instagram": {
+   "person": "Кевин Систром",
+   "file": "Kevin Systrom 2018 (40980041741) (cropped).jpg",
+   "crop": [
+    0,
+    0.05,
+    1.0
+   ],
+   "face": [
+    0.5,
+    0.46,
+    0.2,
+    0.28
+   ]
+  },
+  "apple": {
+   "person": "Стив Джобс",
+   "file": "Steve Jobs Headshot 2010 (cropped 4).jpg",
+   "crop": [
+    0,
+    0.03,
+    1.0
+   ],
+   "face": [
+    0.52,
+    0.42,
+    0.2,
+    0.26
+   ]
+  },
+  "huda": {
+   "person": "Худа Каттан",
+   "file": "HudaKattan.jpg",
+   "crop": [
+    0.215,
+    0.14,
+    0.5
+   ],
+   "face": [
+    0.5,
+    0.36,
+    0.16,
+    0.24
+   ]
+  }
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "facebook": {
+  "person": "Марк Цукерберг",
+  "file": "File:Mark Zuckerberg F8 2019 Keynote (32830578717) (cropped).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mark_Zuckerberg_F8_2019_Keynote_(32830578717)_(cropped).jpg",
+  "author": "Anthony Quintano",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+ },
+ "amazon": {
+  "person": "Джефф Безос",
+  "file": "File:Jeff Bezos' iconic laugh crop.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Jeff_Bezos%27_iconic_laugh_crop.jpg",
+  "author": "Steve Jurvetson",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+ },
+ "airbnb": {
+  "person": "Брайан Чески",
+  "file": "File:Brian Chesky 2025.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Brian_Chesky_2025.jpg",
+  "author": "Celeste Sloman",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "glossier": {
+  "person": "Эмили Вайс",
+  "file": "File:Emily-weiss-2017 (cropped).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Emily-weiss-2017_(cropped).jpg",
+  "author": "TechCrunch",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+ },
+ "spanx": {
+  "person": "Сара Блейкли",
+  "file": "File:Sara Blakely.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Sara_Blakely.jpg",
+  "author": "Gillian Zoe Segal",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "mikaila": {
+  "person": "Микайла Улмер",
+  "file": "File:Mikaila Ulmer.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mikaila_Ulmer.jpg",
+  "author": "Springwater88",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "estee": {
+  "person": "Эсте Лаудер",
+  "file": "File:Estee Lauder NYWTS (cropped).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Estee_Lauder_NYWTS_(cropped).jpg",
+  "author": "Bill Sauro (New York World-Telegram and the Sun)",
+  "license": "Public domain",
+  "licenseUrl": ""
+ },
+ "buffett": {
+  "person": "Уоррен Баффет",
+  "file": "File:Warren Buffett at the 2015 SelectUSA Investment Summit (cropped).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit_(cropped).jpg",
+  "author": "USA International Trade Administration",
+  "license": "Public domain",
+  "licenseUrl": ""
+ },
+ "dropbox": {
+  "person": "Дрю Хьюстон",
+  "file": "File:Drew Houston at Web Summit (cropped).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Drew_Houston_at_Web_Summit_(cropped).jpg",
+  "author": "Web Summit",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+ },
+ "instagram": {
+  "person": "Кевин Систром",
+  "file": "File:Kevin Systrom 2018 (40980041741) (cropped).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Kevin_Systrom_2018_(40980041741)_(cropped).jpg",
+  "author": "Christopher Michel",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+ },
+ "apple": {
+  "person": "Стив Джобс",
+  "file": "File:Steve Jobs Headshot 2010 (cropped 4).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Steve_Jobs_Headshot_2010_(cropped_4).jpg",
+  "author": "Matthew Yohe",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
+ "huda": {
+  "person": "Худа Каттан",
+  "file": "File:HudaKattan.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:HudaKattan.jpg",
+  "author": "Susan Alpin",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ }
+}
