@@ -147,6 +147,9 @@ def inject():
         svg = open(os.path.join(HERE, pid + ".svg"), encoding="utf-8").read()
         pt[pid] = re.sub(r'^<svg[^>]*>|</svg>$', "", svg)
         c = credits[pid]; cr[pid] = {k: c[k] for k in ("author", "license", "licenseUrl", "page")}
+    ddir = os.path.join(HERE, "drawn")                      # рисованные образы (make_drawn.py): без фото, без подписи автора
+    for f in sorted(os.listdir(ddir)) if os.path.isdir(ddir) else ():
+        if f.endswith(".svg"): pt[f[:-4]] = re.sub(r'^<svg[^>]*>|</svg>$', "", open(os.path.join(ddir, f), encoding="utf-8").read())
     js = ("/* PORTRAITS:BEGIN (генерируется portraits/make_portraits.py inject; руками не править) */\n"
           "const PORTRAIT_SIZE = %d;\nconst PORTRAITS = %s;\nconst PORTRAIT_CREDITS = %s;\n/* PORTRAITS:END */"
           % (SIZE, json.dumps(pt, ensure_ascii=False, separators=(",", ":")), json.dumps(cr, ensure_ascii=False, indent=1)))
