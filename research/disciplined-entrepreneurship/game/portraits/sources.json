@@ -58,6 +58,66 @@
    "person": "Худа Каттан",
    "file": "HudaKattan.jpg",
    "scale": 0.5
+  },
+  "estee": {
+   "person": "Эсте Лаудер",
+   "file": null,
+   "scale": 0.92,
+   "pad": [
+    0,
+    0,
+    0,
+    160
+   ],
+   "bg": [
+    [
+     0.8,
+     0.66,
+     1,
+     1
+    ]
+   ]
+  },
+  "zappos": {
+   "person": "Ник Свинмерн",
+   "file": null,
+   "scale": 1.0,
+   "pad": [
+    0,
+    100,
+    0,
+    100
+   ]
+  },
+  "jomalone": {
+   "person": "Джо Малон",
+   "file": null,
+   "scale": 0.48,
+   "trim_top": 8,
+   "pad": [
+    70,
+    0,
+    0,
+    0
+   ],
+   "qmask": 1
+  },
+  "mosbows": {
+   "person": "Мозайя Бриджес",
+   "file": null,
+   "scale": 1.0,
+   "lut": [
+    0,
+    1,
+    2,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "clahe": 1.4,
+   "bgfill": 1
   }
  }
 }

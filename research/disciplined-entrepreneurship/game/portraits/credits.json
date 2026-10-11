@@ -78,5 +78,41 @@
   "author": "Susan Alpin",
   "license": "CC BY-SA 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "estee": {
+  "person": "Эсте Лаудер",
+  "file": "",
+  "page": "",
+  "author": "",
+  "license": "",
+  "licenseUrl": "",
+  "note": "источник не установлен"
+ },
+ "zappos": {
+  "person": "Ник Свинмерн",
+  "file": "",
+  "page": "",
+  "author": "",
+  "license": "",
+  "licenseUrl": "",
+  "note": "источник не установлен"
+ },
+ "jomalone": {
+  "person": "Джо Малон",
+  "file": "",
+  "page": "",
+  "author": "",
+  "license": "",
+  "licenseUrl": "",
+  "note": "источник не установлен"
+ },
+ "mosbows": {
+  "person": "Мозайя Бриджес",
+  "file": "",
+  "page": "",
+  "author": "",
+  "license": "",
+  "licenseUrl": "",
+  "note": "источник не установлен"
  }
 }

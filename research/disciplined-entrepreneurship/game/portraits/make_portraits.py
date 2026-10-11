@@ -39,6 +39,7 @@ def fetch(pdir):
     os.makedirs(pdir, exist_ok=True)
     credits = {}
     for pid, s in SRC.items():
+        if not s.get("file"): continue                    # фото прислал пользователь (не Commons): кладётся в photos_dir руками
         d = api(action="query", titles="File:" + s["file"], prop="imageinfo", iiprop="url|extmetadata", iiurlwidth=2400)
         pg = list(d["query"]["pages"].values())[0]
         ii = pg["imageinfo"][0]; m = ii["extmetadata"]
@@ -73,21 +74,24 @@ def largest(m):
     return f.astype(bool)
 
 
-def tones(crop, m, cxc):
+def tones(crop, m, cxc, s):
     """Яркость -> 8 тонов: сглаженные плоскости + тёмные черты лица (глаза, брови, губы) из детального слоя."""
     import cv2, numpy as np
     N = crop.shape[0]
     L0 = cv2.cvtColor(crop, cv2.COLOR_BGR2LAB)[..., 0]
     Ld = cv2.createCLAHE(2.0, (4, 4)).apply(cv2.bilateralFilter(L0, 7, 30, 5))
     L = L0
+    if s.get("bgfill"): L = L.copy(); L[~m] = int(np.median(L[m]))     # светлый фон не влияет на выравнивание контраста
     for _ in range(2): L = cv2.bilateralFilter(L, 7, 25, 9)
-    L = cv2.createCLAHE(1.8, (2, 2)).apply(L)
+    L = cv2.createCLAHE(s.get("clahe", 1.8), (2, 2)).apply(L)
     yy, xx = np.mgrid[0:N, 0:N]; yt = np.where(m.any(1))[0][0]
     face = m & (yy > yt + 0.18 * N) & (yy < yt + 0.62 * N) & (np.abs(xx - cxc) < 0.17 * N)   # пороги считаем по лицу
-    lvl = np.digitize(L, np.percentile(L[face], QS)).astype(np.uint8)
+    qreg = m if s.get("qmask") else face                   # малоконтрастное (ретушь) лицо: пороги по всей фигуре
+    lvl = np.digitize(L, np.percentile(L[qreg], QS)).astype(np.uint8)
     for k in (5, 3): lvl = cv2.medianBlur(lvl, k)
-    det = cv2.medianBlur(np.digitize(Ld, np.percentile(Ld[face], [9, 22])).astype(np.uint8), 3)
+    det = cv2.medianBlur(np.digitize(Ld, np.percentile(Ld[qreg], [9, 22])).astype(np.uint8), 3)
     lvl = cv2.medianBlur(np.where(det < 2, np.minimum(lvl, det), lvl).astype(np.uint8), 3)
+    if "lut" in s: lvl = np.array(s["lut"], np.uint8)[lvl]   # тёмная кожа: сжать тона к тёмной части гаммы
     return np.array(PAL, np.uint8)[lvl]
 
 
@@ -114,7 +118,10 @@ def trace(pdir, only=()):
     from PIL import Image
     for pid, s in SRC.items():
         if only and pid not in only: continue
-        img = cv2.imread(os.path.join(pdir, pid + ".jpg")); H, W = img.shape[:2]
+        img = cv2.imread(os.path.join(pdir, pid + ".jpg"))[s.get("trim_top", 0):]   # trim_top: тёмная кромка скриншота
+        if "pad" in s:                                    # [верх, право, низ, лево]: дотянуть фон, если голове тесно в кадре
+            t_, r_, b_, l_ = s["pad"]; img = cv2.copyMakeBorder(img, t_, b_, l_, r_, cv2.BORDER_REPLICATE)
+        H, W = img.shape[:2]
         M = person_mask(img)
         side = int(min(W, H, s["scale"] * W))                     # сторона кадра, доля ширины фото
         yt = np.where(M.any(1))[0][0]                             # макушка
@@ -127,7 +134,7 @@ def trace(pdir, only=()):
             m[int(by0 * SIZE):int(by1 * SIZE), int(bx0 * SIZE):int(bx1 * SIZE)] = False
         m = largest(m)
         assert not m[0].any(), (pid, "голова касается верха кадра")
-        rgba = np.dstack([tones(crop, m, (cx - x0) * SIZE / side), (m * 255).astype(np.uint8)])
+        rgba = np.dstack([tones(crop, m, (cx - x0) * SIZE / side, s), (m * 255).astype(np.uint8)])
         png = os.path.join(pdir, pid + "_q.png"); Image.fromarray(rgba, "RGBA").save(png)
         raw = os.path.join(pdir, pid + "_raw.svg")
         vtracer.convert_image_to_svg_py(png, raw, colormode="color", hierarchical="stacked", mode="spline",
@@ -146,7 +153,7 @@ def inject():
     for pid in SRC:
         svg = open(os.path.join(HERE, pid + ".svg"), encoding="utf-8").read()
         pt[pid] = re.sub(r'^<svg[^>]*>|</svg>$', "", svg)
-        c = credits[pid]; cr[pid] = {k: c[k] for k in ("author", "license", "licenseUrl", "page")}
+        c = credits[pid]; cr[pid] = {k: c.get(k, "") for k in ("author", "license", "licenseUrl", "page", "note")}
     ddir = os.path.join(HERE, "drawn")                      # рисованные образы (make_drawn.py): без фото, без подписи автора
     for f in sorted(os.listdir(ddir)) if os.path.isdir(ddir) else ():
         if f.endswith(".svg"): pt[f[:-4]] = re.sub(r'^<svg[^>]*>|</svg>$', "", open(os.path.join(ddir, f), encoding="utf-8").read())
