@@ -9,9 +9,9 @@
  },
  "amazon": {
   "person": "Джефф Безос",
-  "file": "File:Jeff Bezos' iconic laugh crop.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Jeff_Bezos%27_iconic_laugh_crop.jpg",
-  "author": "Steve Jurvetson",
+  "file": "File:Jeff Bezos at Amazon Spheres Grand Opening in Seattle - 2018 (39074799225) (cropped).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_(39074799225)_(cropped).jpg",
+  "author": "Seattle City Council",
   "license": "CC BY 2.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
  },
@@ -38,22 +38,6 @@
   "author": "Gillian Zoe Segal",
   "license": "CC BY-SA 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
- },
- "mikaila": {
-  "person": "Микайла Улмер",
-  "file": "File:Mikaila Ulmer.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Mikaila_Ulmer.jpg",
-  "author": "Springwater88",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
- },
- "estee": {
-  "person": "Эсте Лаудер",
-  "file": "File:Estee Lauder NYWTS (cropped).jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Estee_Lauder_NYWTS_(cropped).jpg",
-  "author": "Bill Sauro (New York World-Telegram and the Sun)",
-  "license": "Public domain",
-  "licenseUrl": ""
  },
  "buffett": {
   "person": "Уоррен Баффет",

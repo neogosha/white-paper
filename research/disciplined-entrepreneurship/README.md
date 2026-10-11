@@ -194,20 +194,18 @@
 ### Авторы фото для портретов в «Зале славы»
 
 Портреты героев в игре — векторные рисунки, сделанные по свободным фотографиям с Wikimedia Commons.
-Фото обрезано, фон убран, цвета упрощены, контуры оцифрованы (**изменено**; скрипт —
+Фото обрезано, фон убран нейросетью rembg, цвета сведены к 8 тонам одной тёплой гаммы, контуры оцифрованы (**изменено**; скрипт —
 [`game/portraits/make_portraits.py`](game/portraits/make_portraits.py), исходные фото в репозитории не хранятся).
 Производные работы по фото с лицензиями CC BY-SA распространяются на тех же условиях (CC BY-SA того же номера версии, что у фото).
-Для Мозайи Бриджеса, Ника Свинмерна и Джо Малон свободного фото на Wikimedia Commons не нашлось — у них остался рисованный образ.
+Для Мозайи Бриджеса, Ника Свинмерна и Джо Малон свободного фото на Wikimedia Commons и в Openverse не нашлось, а единственные свободные фото Микайлы Улмер и Эсте Лаудер для портрета не подошли (ракурс снизу, взгляд вниз) — у этих пятерых рисованный образ.
 
 | Герой | Автор фото | Лицензия | Файл на Wikimedia Commons |
 |---|---|---|---|
 | Марк Цукерберг | Anthony Quintano | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [File:Mark Zuckerberg F8 2019 Keynote (32830578717) (cropped).jpg](https://commons.wikimedia.org/wiki/File:Mark_Zuckerberg_F8_2019_Keynote_(32830578717)_(cropped).jpg) |
-| Джефф Безос | Steve Jurvetson | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [File:Jeff Bezos' iconic laugh crop.jpg](https://commons.wikimedia.org/wiki/File:Jeff_Bezos%27_iconic_laugh_crop.jpg) |
+| Джефф Безос | Seattle City Council | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [File:Jeff Bezos at Amazon Spheres Grand Opening in Seattle - 2018 (39074799225) (cropped).jpg](https://commons.wikimedia.org/wiki/File:Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_(39074799225)_(cropped).jpg) |
 | Брайан Чески | Celeste Sloman | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [File:Brian Chesky 2025.jpg](https://commons.wikimedia.org/wiki/File:Brian_Chesky_2025.jpg) |
 | Эмили Вайс | TechCrunch | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [File:Emily-weiss-2017 (cropped).jpg](https://commons.wikimedia.org/wiki/File:Emily-weiss-2017_(cropped).jpg) |
 | Сара Блейкли | Gillian Zoe Segal | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [File:Sara Blakely.jpg](https://commons.wikimedia.org/wiki/File:Sara_Blakely.jpg) |
-| Микайла Улмер | Springwater88 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [File:Mikaila Ulmer.jpg](https://commons.wikimedia.org/wiki/File:Mikaila_Ulmer.jpg) |
-| Эсте Лаудер | Bill Sauro (New York World-Telegram and the Sun) | Public domain | [File:Estee Lauder NYWTS (cropped).jpg](https://commons.wikimedia.org/wiki/File:Estee_Lauder_NYWTS_(cropped).jpg) |
 | Уоррен Баффет | USA International Trade Administration | Public domain | [File:Warren Buffett at the 2015 SelectUSA Investment Summit (cropped).jpg](https://commons.wikimedia.org/wiki/File:Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit_(cropped).jpg) |
 | Дрю Хьюстон | Web Summit | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [File:Drew Houston at Web Summit (cropped).jpg](https://commons.wikimedia.org/wiki/File:Drew_Houston_at_Web_Summit_(cropped).jpg) |
 | Кевин Систром | Christopher Michel | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [File:Kevin Systrom 2018 (40980041741) (cropped).jpg](https://commons.wikimedia.org/wiki/File:Kevin_Systrom_2018_(40980041741)_(cropped).jpg) |
